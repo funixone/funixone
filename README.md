@@ -1,16 +1,27 @@
-## Hi there 👋
+# 👋 Hi, I'm Fachri
 
-<!--
-**funixone/funixone** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+### 🛠 Cyber Security Enthusiast | Bug Hunter | Developer
 
-Here are some ideas to get you started:
+Welcome to my GitHub! I specialize in penetration testing, cybersecurity research, and API development. I enjoy discovering vulnerabilities, building security tools, and sharing knowledge with the community.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Skills & Expertise
+
+- **Pentesting & Bug Bounty**: OSINT, SQL Injection, XSS, SSRF, and more.
+- **Development**: Bash scripting, Python, PHP, and JavaScript.
+- **API & Web Development**: Secure API development and testing.
+- **Reverse Engineering & Exploit Development**.
+- **OSINT**.
+
+## 📌 Projects
+
+- **[APIKU-ID]**: A platform providing various APIs, including NIK parsing, number checking, and more.
+- **Security Tools**: Custom scripts for security testing and vulnerability scanning.
+- **Bug Hunting Resources**: Write-ups and tools for ethical hacking.
+
+## 📫 Connect With Me
+
+- **Website**: [fox](https://funixone.github.io/funixone))
+- **Telegram**: [FoxxsClay](https://t.me/@ArchiveGovernment))
+
+> ⚠ **Disclaimer:** My projects and tools are for educational and authorized security testing only.
+Happy Hacking! 🛡️
