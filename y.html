@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pwned By FoxxsClay</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: black;
+            color: cyan;
+            font-family: 'Audiowide', cursive;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 40px;
+            text-shadow: 0 0 10px cyan, 0 0 20px magenta, 0 0 30px red;
+            animation: glitch 1s infinite alternate;
+        }
+
+        p {
+            font-size: 22px;
+            color: white;
+            text-shadow: 0 0 5px red;
+        }
+
+        .quote {
+            font-size: 16px;
+            font-style: italic;
+            color: red;
+            animation: fadeIn 2s infinite alternate;
+        }
+
+        .typing {
+            display: inline-block;
+            border-right: 2px solid cyan;
+            white-space: nowrap;
+            overflow: hidden;
+            animation: typing 3s steps(40) infinite, blink 0.5s infinite;
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 0 0 10px cyan, 0 0 20px magenta; }
+            50% { text-shadow: 0 0 15px red, 0 0 25px cyan; }
+            100% { text-shadow: 0 0 10px cyan, 0 0 20px magenta; }
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+
+        .skull {
+            font-size: 80px;
+            filter: drop-shadow(0 0 10px red);
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0% { transform: translate(0, 0); }
+            20% { transform: translate(-2px, 2px); }
+            40% { transform: translate(2px, -2px); }
+            60% { transform: translate(-2px, -2px); }
+            80% { transform: translate(2px, 2px); }
+            100% { transform: translate(0, 0); }
+        }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 30px; }
+            p { font-size: 18px; }
+            .skull { font-size: 60px; }
+        }
+    </style>
+</head>
+<body>
+    <h1>Pwned By FoxxsClay</h1>
+    <br>
+    <p class="quote">Beberapa orang meninggalkan jejak di hatimu,
+    <br>aku meninggalkan jejak di servermu.</p>
+    <div>
+    <p><br><br>MISTERWIN777</p>
+    </div>
+    <audio autoplay loop>
+        <source src="hacker-music.mp3" type="audio/mpeg">
+    </audio>
+</body>
+</html>
