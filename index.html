@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="id"><head>
+<html lang="id">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FoxxsClay - Profile</title>
@@ -8,21 +9,35 @@
 </head>
 <body>
 
-    <div class="menu-icon">
-    <i class="fas fa-bars"></i>
+    <div class="menu-icon" id="menuToggle">
+        <i class="fas fa-bars"></i>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#about"><i class="fas fa-user"></i> About</a>
+            <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+            <a href="#programming"><i class="fas fa-laptop-code"></i> Languages</a>
+            <div class="social-links">
+                <a href="https://t.me/ChineseArchives" target="_blank"><i class="fab fa-telegram"></i></a>
+                <a href="https://github.com/funixone" target="_blank"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </div>
 
     <header>
         <div class="container">
-            <div class="logo">
-                <img src="8810727dc8d322f889e1a7089958fada.jpg" alt="FoxxsClay">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="8810727dc8d322f889e1a7089958fada.jpg" alt="FoxxsClay">
+                </div>
             </div>
-            <h1>FoxxsClay</h1>
-            <p class="tagline">🚀 Explore All Programming</p>
+            
+            <div class="header-title">
+                <h1>FoxxsClay</h1>
+                <p class="tagline">🚀 Explore All Programming</p>
+            </div>
         </div>
     </header>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <h2><i class="fas fa-user"></i> About Me</h2>
             <p>💻 Just a Student Development</p>
@@ -35,41 +50,91 @@
         </div>
     </section>
 
-    <section class="skills">
+    <section class="skills" id="skills">
         <div class="container">
             <h2><i class="fas fa-code"></i> Skills</h2>
             <div class="skill-grid">
-                <div class="skill-card">Android Dev</div>
-                <div class="skill-card">Web Dev</div>
-                <div class="skill-card">Reverse Engineering</div>
-                <div class="skill-card">CyberSec</div>
-                <div class="skill-card">OSINT</div>
-                <div class="skill-card">Machine Learning</div>
+                <div class="skill-card" data-skill="android">
+                    <i class="fab fa-android"></i> Android Dev
+                </div>
+                <div class="skill-card" data-skill="web">
+                    <i class="fas fa-globe"></i> Web Dev
+                </div>
+                <div class="skill-card" data-skill="reverse">
+                    <i class="fas fa-search"></i> Reverse Engineering
+                </div>
+                <div class="skill-card" data-skill="cybersec">
+                    <i class="fas fa-shield-alt"></i> CyberSec
+                </div>
+                <div class="skill-card" data-skill="osint">
+                    <i class="fas fa-binoculars"></i> OSINT
+                </div>
+                <div class="skill-card" data-skill="ml">
+                    <i class="fas fa-robot"></i> Machine Learning
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="programming">
+    <section class="programming" id="programming">
         <div class="container">
             <h2><i class="fas fa-laptop-code"></i> Programming Skills</h2>
             <div class="skill-grid">
-                <div class="skill-card">JavaScript</div>
-                <div class="skill-card">Java</div>
-                <div class="skill-card">Python</div>
-                <div class="skill-card">C</div>
-                <div class="skill-card">C#</div>
-                <div class="skill-card">Kotlin</div>
-                <div class="skill-card">PHP</div>
+                <div class="skill-card" data-language="javascript">
+                    <i class="fab fa-js"></i> JavaScript
+                </div>
+                <div class="skill-card" data-language="java">
+                    <i class="fab fa-java"></i> Java
+                </div>
+                <div class="skill-card" data-language="python">
+                    <i class="fab fa-python"></i> Python
+                </div>
+                <div class="skill-card" data-language="c">
+                    <i class="fas fa-c"></i> C
+                </div>
+                <div class="skill-card" data-language="csharp">
+                    <i class="fas fa-hashtag"></i> C
+                </div>
+                <div class="skill-card" data-language="kotlin">
+                    <i class="fas fa-k"></i>  Kotlin
+                </div>
+                <div class="skill-card" data-language="php">
+                    <i class="fab fa-php"></i> PHP
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
-    <p>FoxxsClay ID</p>
-    <a href="https://t.me/fanatixcysec" target="_blank" class="telegram-link">
-        <i class="fab fa-telegram-plane"></i> Telegram
-    </a>
-</footer>
+        <p>FoxxsClay ID</p>
+        <div class="footer-links">
+            <a href="https://t.me/fanatixcysec" target="_blank" class="telegram-link">
+                <i class="fab fa-telegram-plane"></i> Telegram
+            </a>
+            <a href="https://github.com/funixone" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </footer>
 
+    <script>
+        const menuIcon = document.querySelector(".menu-icon");
+        const mobileMenu = document.querySelector(".mobile-menu");
+    
+        menuIcon.addEventListener("click", function (event) {
+            mobileMenu.classList.toggle("active");
+            this.classList.toggle("open");
+            
+            event.stopPropagation();
+        });
+    
+        document.addEventListener("click", function (event) {
+            if (!mobileMenu.contains(event.target) && !menuIcon.contains(event.target)) {
+                mobileMenu.classList.remove("active");
+                menuIcon.classList.remove("open");
+            }
+        });
+    </script>
+    
 </body>
 </html>
