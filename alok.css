@@ -105,6 +105,17 @@ ul li {
     box-shadow: 0px 6px 15px rgba(255, 255, 255, 0.2);
 }
 
+.menu-icon {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    z-index: 100;
+    color: white;
+}
+
+
 footer {
     margin-top: 30px;
     opacity: 0.7;
